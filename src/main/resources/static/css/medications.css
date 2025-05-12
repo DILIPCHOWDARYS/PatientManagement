@@ -1,0 +1,155 @@
+body {
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    text-align: center;
+    padding: 40px 20px 10px;
+    animation: fadeIn 1.2s ease;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #0B6E4F;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 16px;
+    color: #013220;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 20px auto;
+    background: #D1F2EB;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    animation: popIn 1s ease-in;
+    color: #013220;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #0B6E4F;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0B6E4F;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.medication-entry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto; /* Four inputs + Remove button */
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.medication-entry input {
+    min-width: 100px;
+}
+
+.medication-entry .remove-button {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-button, .animated-button {
+    background-color: #50C878;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.add-button:hover, .animated-button:hover {
+    background-color: #0B6E4F;
+    transform: scale(1.05);
+}
+
+#successMessage {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0B6E4F;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.back-link a {
+    color: #0B6E4F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #50C878;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* 📱 Mobile View Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medication-entry {
+        grid-template-columns: 1fr; /* Stack inputs vertically */
+    }
+
+    .medication-entry input,
+    .medication-entry .remove-button {
+        width: 100%;
+    }
+}

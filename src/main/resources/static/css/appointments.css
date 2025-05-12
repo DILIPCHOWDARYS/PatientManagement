@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    color: #013220;
+}
+
+/*  Top Intro Section */
+.header-section {
+    text-align: center;
+    padding: 30px 15px 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #0B6E4F;
+}
+
+.header-section p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: auto;
+    color: #013220;
+}
+
+/*  Banner */
+.responsive-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.responsive-banner img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.responsive-banner img:hover {
+    transform: scale(1.01);
+}
+
+/*  Form Section */
+.container {
+    background: #ffffff;
+    border: 2px solid #50C878;
+    padding: 30px;
+    border-radius: 14px;
+    animation: popIn 0.8s ease;
+    width: 90%;
+    max-width: 750px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 40px;
+}
+
+.container h2 {
+    color: #0B6E4F;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+input, button, select {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #50C878;
+    outline: none;
+    box-shadow: 0 0 6px rgba(80, 200, 120, 0.4);
+}
+
+button {
+    background-color: #50C878;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0B6E4F;
+}
+
+/*  Footer */
+.appointment-footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-style: italic;
+    color: #013220;
+    background-color: rgba(209, 242, 235, 0.4);
+    border-top: 1px solid #50C878;
+}
+
+/*  Animations */
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header-section h1 {
+        font-size: 26px;
+    }
+
+    .header-section p {
+        font-size: 14px;
+    }
+}

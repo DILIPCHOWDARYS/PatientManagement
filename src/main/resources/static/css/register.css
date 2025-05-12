@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px solid #50C878;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    animation: slideUp 1.2s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+img {
+    width: 60px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #0B6E4F;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button {
+    padding: 12px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #50C878;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #0B6E4F;
+    box-shadow: 0 0 6px rgba(11, 110, 79, 0.3);
+}
+
+button {
+    background: linear-gradient(to right, #50C878, #0B6E4F);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0B6E4F, #50C878);
+    transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-redirect a {
+    color: #0B6E4F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}

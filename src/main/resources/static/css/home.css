@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*  Top banner */
+.top-banner {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #0B6E4F;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/*  Main container */
+.container {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 2px solid #50C878;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 30px auto;
+    animation: slideUp 1.2s ease;
+}
+
+.logo {
+    width: 60px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 30px;
+    color: #0B6E4F;
+    margin-bottom: 15px;
+}
+.highlight {
+    color: #50C878;
+}
+
+.tagline {
+    font-size: 17px;
+    color: #013220;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.buttons .btn {
+    display: inline-block;
+    background: linear-gradient(to right, #50C878, #0B6E4F);
+    color: #fff;
+    padding: 12px 26px;
+    margin: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+.buttons .btn:hover {
+    background: linear-gradient(to right, #0B6E4F, #50C878);
+    transform: scale(1.05);
+}
+
+/* 🌿 Quote section */
+.quote-section {
+    text-align: center;
+    margin: 40px auto 20px;
+}
+.quote-section blockquote {
+    font-style: italic;
+    font-size: 18px;
+    color: #013220;
+    border-left: 4px solid #50C878;
+    padding-left: 15px;
+    display: inline-block;
+}
+.quote-section span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #0B6E4F;
+}
+
+/*  Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 30px 50px;
+    gap: 20px;
+}
+.feature-card {
+    background-color: #ffffff;
+    border: 2px solid #50C878;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease;
+}
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #0B6E4F;
+}
+.feature-card p {
+    color: #013220;
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctors</title>
+    <script src="/js/form-doctor.js" defer></script>
+    <link rel="stylesheet" href="/css/doctors.css">
+</head>
+<body>
+
+<header class="doctor-header">
+    <h1>👨‍⚕️ Meet Our Expert Doctors</h1>
+    <p>Explore our panel of highly qualified and specialized medical professionals.</p>
+</header>
+
+<div class="container">
+    <img src="/images/hospital-icon.jpg" alt="Hospital Icon" class="hospital-icon">
+
+    <h2>Doctor List</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Specialization</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="doc : ${doctors}">
+            <td th:text="${doc.name}"></td>
+            <td th:text="${doc.email}"></td>
+            <td th:text="${doc.specialization}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="back-link" style="text-align:center; margin: 30px 0; font-weight: bold;">
+    <a href="/dashboard" style="color: #0B6E4F; text-decoration: none;">
+        ← Back to Dashboard
+    </a>
+</div>
+<footer class="footer-text">
+    <p>🔬 Stay healthy with expert advice and timely care from our verified specialists.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<header class="top-banner">
+    <h1>🏥 PatientCare Portal</h1>
+    <p>Your central hub for medical appointments, medications & more</p>
+</header>
+
+<section class="user-info">
+    <img src="/images/hospital-icon.jpg" alt="Hospital Icon">
+    <p class="welcome">Welcome, <span th:text="${#authentication.name}"></span> 👋</p>
+</section>
+
+<section class="dashboard-grid">
+    <a th:href="@{/appointments}" class="dashboard-card">📅<br/>Book Appointment</a>
+    <a th:href="@{/doctors}" class="dashboard-card">👨‍⚕️<br/>View Doctors</a>
+    <a th:href="@{/medications}" class="dashboard-card">💊<br/>Medications</a>
+    <a th:href="@{/appointments/view}" class="dashboard-card">📋<br/>Your Appointments</a>
+</section>
+
+<section class="logout-section">
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="logout-button">🚪 Logout</button>
+    </form>
+</section>
+
+<footer class="footer-quote">
+    <p>🧠 “An ounce of prevention is worth a pound of cure.” </p>
+</footer>
+
+</body>
+</html>

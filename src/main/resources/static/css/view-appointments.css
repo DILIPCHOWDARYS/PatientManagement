@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-banner {
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: #013220;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header-banner h1 {
+    font-size: 32px;
+    color: #0B6E4F;
+    margin-bottom: 10px;
+}
+
+.header-banner p {
+    font-size: 16px;
+    color: #013220;
+}
+
+.table-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #D1F2EB;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.9s ease-in-out;
+    flex-grow: 1;
+    color: #013220;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #b8e9dc;
+    font-size: 15px;
+    color: #013220;
+}
+
+th {
+    background-color: #50C878;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #b0e6d2;
+    transition: background-color 0.3s ease;
+}
+
+.back-link {
+    margin: 25px auto 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.back-link a {
+    color: #0B6E4F;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #50C878;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .table-wrapper {
+        padding: 20px;
+    }
+
+    .header-banner h1 {
+        font-size: 24px;
+    }
+
+    .header-banner p {
+        font-size: 14px;
+    }
+}

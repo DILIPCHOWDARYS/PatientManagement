@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <script src="/js/form-validation.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="container">
+    <img src="/images/hospital-icon.jpg" alt="Hospital Icon">
+
+    <h2>Hospital Login</h2>
+
+        <form th:action="@{/login}" method="post">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+
+    <p class="message">
+        Don't have an account? <a th:href="@{/register}">Register here</a><br/>
+    </p>
+    <p class="forgot-password">
+        <a th:href="@{/forgot-password}">Forgot Password?</a>
+    </p>
+    <p th:if="${param.error}" style="color:red;">Invalid credentials</p>
+    <p th:if="${param.logout}" style="color:green;">Logged out successfully</p>
+</div>
+</body>
+</html>

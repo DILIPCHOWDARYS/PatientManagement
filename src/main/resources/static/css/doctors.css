@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #D1F2EB, #50C878, #0B6E4F, #013220);
+    color: #013220;
+}
+
+/* Header */
+.doctor-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.doctor-header h1 {
+    font-size: 32px;
+    color: #0B6E4F;
+    margin-bottom: 10px;
+}
+
+.doctor-header p {
+    font-size: 16px;
+    color: #013220;
+    margin-bottom: 20px;
+}
+
+/* Container */
+.container {
+    background: #0B6E4F;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #D1F2EB;
+    max-width: 960px;
+    margin: auto;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.9s ease-in;
+    text-align: center;
+    color: white;
+}
+
+.hospital-icon {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #D1F2EB;
+    text-align: center;
+    color: #013220;
+}
+
+th {
+    background-color: #50C878;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d1f2eb;
+    color: #013220;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f0faf7;
+    color: #013220;
+}
+
+tbody tr:hover {
+    background-color: #b0e6d2;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Back Link */
+.back-link {
+    text-align: center;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.back-link a {
+    color: #FFD700 !important;  /* Golden yellow with force to override other styles */
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer-text {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 15px;
+    color: #D1F2EB;
+    padding: 20px 10px;
+}
+
+/* Animations */
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .doctor-header h1 {
+        font-size: 24px;
+    }
+
+    .doctor-header p {
+        font-size: 14px;
+    }
+
+    .back-link a {
+        font-size: 14px;
+    }
+}

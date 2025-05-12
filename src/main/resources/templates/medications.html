@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Prescribe Medications</title>
+    <link rel="stylesheet" th:href="@{/css/medications.css}">
+    <script src="/js/medications.js" defer></script>
+</head>
+
+<body>
+
+<header class="page-header">
+    <h1>💊 Patient Medication Center</h1>
+    <p>Prescribe medications easily and search patient history — all in one place.</p>
+</header>
+
+<div class="container">
+    <h2>📝 Prescribe Medications</h2>
+
+    <form id="medicationForm">
+        <input type="text" id="patientName" placeholder="Patient Name" required />
+
+        <div id="medicationList">
+            <div class="medication-entry">
+                <input type="text" placeholder="Medicine Name" class="medicineName" required />
+                <input type="text" placeholder="Dosage" class="dosage" required />
+                <input type="text" placeholder="Frequency" class="frequency" required />
+                <input type="text" placeholder="Duration" class="duration" required />
+                <button type="button" class="remove-button" onclick="removeEntry(this)">Remove</button>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="add-button" onclick="addMedicationEntry()">➕ Add Another</button>
+            <button type="submit" class="animated-button">💾 Submit All</button>
+        </div>
+    </form>
+
+    <p id="successMessage" style="color:green; display:none;">✅ Medications submitted successfully!</p>
+
+    <hr>
+
+    <h3>🔍 Search Medications</h3>
+    <form id="searchForm">
+        <input type="text" id="searchName" placeholder="Enter Patient Name" required />
+        <button type="submit" class="animated-button">🔎 Search</button>
+    </form>
+
+    <div id="medicationResults" style="margin-top: 20px;">
+        <!-- Search results will be displayed here -->
+    </div>
+
+    <div class="back-link">
+        <br>
+        <a th:href="@{/dashboard}">⬅ Back to Dashboard</a>
+    </div>
+</div>
+
+</body>
+</html>

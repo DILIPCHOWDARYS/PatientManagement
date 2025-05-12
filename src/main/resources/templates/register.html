@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+<div class="container">
+    <img src="/images/hospital-icon.jpg" alt="Hospital Icon">
+
+    <h2>Register</h2>
+    <form th:action="@{/register}" th:object="${user}" method="post">
+        <input type="text" th:field="*{username}" placeholder="Username" required />
+        <input type="email" th:field="*{email}" placeholder="Email" required />
+        <input type="password" th:field="*{password}" placeholder="Password" required />
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- 🔁 Redirect to Login -->
+    <p class="login-redirect">Already have an account? <a th:href="@{/login}">Login here</a></p>
+</div>
+</body>
+</html>

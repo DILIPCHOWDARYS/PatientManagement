@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="/css/appointments.css">
+  <script src="/js/appointments.js" defer></script>
+</head>
+<body>
+
+<div class="header-section">
+  <h1>📅 Book Your Appointment</h1>
+  <p>Your health is our priority. Choose a department, pick a doctor, and set a time that works best for you.</p>
+</div>
+
+<div class="container">
+  <div class="responsive-banner">
+    <img src="/images/booking-banner.png" alt="Book Appointment Banner">
+  </div>
+
+  <h2>Fill Out Appointment Details</h2>
+
+  <form th:action="@{/appointments/api}" method="post">
+    <input type="text" name="patientName" placeholder="Enter Patient Name" required />
+
+    <select id="department" name="department" onchange="updateDoctorDropdown()" required>
+      <option value="" disabled selected>Select Department</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="Dermatology">Dermatology</option>
+      <option value="General Surgery">General Surgery</option>
+      <option value="Neurology">Neurology</option>
+      <option value="Urology">Urology</option>
+      <option value="Pediatrics">Pediatrics</option>
+    </select>
+
+    <select id="doctorId" name="doctorId" required>
+      <option value="" disabled selected>Select Doctor</option>
+    </select>
+
+    <input type="date" name="date" required />
+    <input type="time" name="time" required />
+    <input type="text" name="reason" placeholder="Reason for Visit" required />
+    <button type="submit">Confirm Booking</button>
+  </form>
+</div>
+
+<footer class="appointment-footer">
+  <p>🧑‍⚕️ We’re committed to providing timely, efficient, and quality care for you and your family.</p>
+</footer>
+
+</body>
+</html>

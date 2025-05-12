@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to PatientCare</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}" href="/css/home.css">
+</head>
+<body>
+
+<!--  Top Message Banner -->
+<header class="top-banner">
+    <p>🩺 Empowering Your Health, One Click at a Time</p>
+</header>
+
+<!--  Main Welcome Card -->
+<div class="container">
+    <img src="/images/hospital-icon.jpg" alt="Logo" class="logo">
+    <h1>Welcome to <span class="highlight">PatientCare</span></h1>
+    <p class="tagline">Your trusted partner for health — book appointments, manage medicines, and consult doctors, all in one place.</p>
+
+    <div class="buttons">
+        <a th:href="@{/login}" class="btn">Login</a>
+        <a th:href="@{/register}" class="btn">Register</a>
+    </div>
+</div>
+
+<!--  Quote or Motivation -->
+<section class="quote-section">
+    <blockquote>
+        “The greatest wealth is health.”
+    </blockquote>
+</section>
+
+<!--  Features Overview Section -->
+<section class="features">
+    <div class="feature-card">
+        <h3>📅 Easy Appointments</h3>
+        <p>Schedule consultations with verified doctors in just a few clicks.</p>
+    </div>
+    <div class="feature-card">
+        <h3>💊 Medicine Tracker</h3>
+        <p>Track your prescriptions, get reminders, and never miss a dose.</p>
+    </div>
+    <div class="feature-card">
+        <h3>🧠 Expert Advice</h3>
+        <p>Stay informed with expert health tips and personalized suggestions.</p>
+    </div>
+</section>
+
+</body>
+</html>
